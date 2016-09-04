@@ -5,7 +5,7 @@ class App extends React.Component {
   static propTypes = {
     routes: PropTypes.object.isRequired,
     history: PropTypes.object.isRequired
-  }
+  };
 
   // class getter
   get content() {
