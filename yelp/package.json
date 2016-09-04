@@ -4,7 +4,8 @@
   "description": "yelp implementation using react",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "test"
+    "start": "NODE_ENV=development ./node_modules/.bin/hjs-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   },
   "homepage": "https://github.com/djimenezc/yelp-react#readme",
   "devDependencies": {
+    "autoprefixer": "^6.4.1",
     "babel-core": "^6.14.0",
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.14.0",
@@ -29,9 +31,12 @@
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-0": "^6.5.0",
     "css-loader": "^0.24.0",
+    "cssnano": "^3.7.4",
+    "dotenv": "^2.0.0",
     "file-loader": "^0.9.0",
     "hjs-webpack": "^8.3.0",
     "postcss-loader": "^0.11.1",
+    "precss": "^1.4.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.2"
