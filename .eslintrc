@@ -1,0 +1,21 @@
+{
+  "extends": "eslint:recommended",
+  "plugins": ["react"],
+  "env": {
+    "es6": true,
+    "browser": true,
+    "jasmine": true
+  },
+  "ecmaFeatures": {
+    "modules": true
+  },
+  "globals": {
+    "module": true,
+    "inject": true,
+    "process": true,
+    "require": true
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  }
+}
