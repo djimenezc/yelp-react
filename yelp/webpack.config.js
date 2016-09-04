@@ -76,7 +76,7 @@ const newloader = Object.assign({}, cssloader, {
     test: /\.module\.css$/,
     include: [src],
     loader: cssloader.loader.replace(matchCssLoaders, `$1$2?modules&localIdentName=${cssModulesNames}$3`)
-})
+});
 config.module.loaders.push(newloader);
 cssloader.test = new RegExp(`[^module]${cssloader.test.source}`)
 cssloader.loader = newloader.loader
@@ -85,7 +85,7 @@ config.module.loaders.push({
     test: /\.css$/,
     include: [modules],
     loader: 'style!css'
-})
+});
 // CSS modules
 
 // postcss
@@ -93,7 +93,7 @@ config.postcss = [].concat([
     require('precss')({}),
     require('autoprefixer')({}),
     require('cssnano')({})
-])
+]);
 // END postcss
 
 // Roots
@@ -105,7 +105,7 @@ config.resolve.alias = {
     'utils': join(src, 'utils'),
 
     'styles': join(src, 'styles')
-}
+};
 // end Roots
 
 // console.log(require('prettyjson').render(config));
@@ -116,7 +116,7 @@ if (isTest) {
         'react/addons': true,
         'react/lib/ReactContext': true,
         'react/lib/ExecutionEnvironment': true,
-    }
+    };
     config.module.noParse = /[/\\]sinon\.js/;
     config.resolve.alias['sinon'] = 'sinon/pkg/sinon';
 

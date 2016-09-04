@@ -1,6 +1,8 @@
 {
-  "extends": "eslint:recommended",
-  "plugins": ["react"],
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "plugins": [
+    "react"
+  ],
   "env": {
     "es6": true,
     "browser": true,
@@ -13,9 +15,13 @@
     "module": true,
     "inject": true,
     "process": true,
-    "require": true
+    "require": true,
+    "__NODE_ENV__": true
   },
   "parserOptions": {
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   }
 }
