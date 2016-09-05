@@ -7,7 +7,7 @@ export class Header extends React.Component {
   render() {
     return (
       <div className={styles.topbar}>
-        <Link to="/"><h1>Yelp</h1></Link>
+        <Link className={styles.logo} to="/"><h1>Yelp</h1></Link>
         <section>
           Fullstack.io
         </section>
@@ -16,4 +16,4 @@ export class Header extends React.Component {
   }
 }
 
-export default Header;
+export default Header

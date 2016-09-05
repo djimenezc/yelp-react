@@ -13,7 +13,7 @@ describe('<Header />', () => {
 
   it('contains a title component with yelp', () => {
     expect(wrapper.find('h1').first().text())
-        .to.equal('david-yelp')
+        .to.equal('Yelp')
   });
 
   it('contains topbar styling', () => {

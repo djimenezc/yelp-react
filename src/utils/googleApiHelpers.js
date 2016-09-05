@@ -23,7 +23,7 @@ export function getDetails(google, map, placeId) {
 
     const request = {
       placeId
-    };
+    }
 
     service.getDetails(request, (place, status) => {
       if (status !== google.maps.places.PlacesServiceStatus.OK) {

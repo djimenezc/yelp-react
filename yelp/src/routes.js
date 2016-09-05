@@ -1,5 +1,5 @@
 import React from 'react'
-import {Route} from 'react-router'
+import {browserHistory, Router, Route, Redirect} from 'react-router'
 
 import makeMainRoutes from './views/Main/routes'
 
@@ -13,4 +13,6 @@ export const makeRoutes = () => {
   )
 };
 
-export default makeRoutes;
+
+
+export default makeRoutes

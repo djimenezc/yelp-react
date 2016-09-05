@@ -16,7 +16,8 @@
     "inject": true,
     "process": true,
     "require": true,
-    "__NODE_ENV__": true
+    "__NODE_ENV__": true,
+    "__GAPI_KEY__": true
   },
   "parserOptions": {
     "sourceType": "module",
