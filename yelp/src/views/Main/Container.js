@@ -5,6 +5,8 @@ import {searchNearby} from 'utils/googleApiHelpers'
 // relatively to the src/ directory
 import Header from 'components/Header/Header'
 
+import styles from './styles.module.css'
+
 export class Container extends React.Component {
 
   constructor(props) {
@@ -45,13 +47,16 @@ export class Container extends React.Component {
         <Map
           onReady={this.onReady.bind(this)}
           google={this.props.google}
+          className={styles.wrapper}
           visible={false}/>
 
         <Header />
 
-        {this.state.places.map(place => {
-          return (<div key={place.id}>{place.name}</div>)
-        })}
+        <div className={styles.content}>
+          {this.state.places.map(place => {
+            return (<div key={place.id}>{place.name}</div>)
+          })}
+        </div>
       </div>
     )
   }
