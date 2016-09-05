@@ -3,7 +3,7 @@ let scriptMap = new Map();
 
 export const ScriptCache = (function(global) {
   return function ScriptCache (scripts) {
-    const Cache = {}
+    const Cache = {};
 
     Cache._onLoad = function (key) {
       return (cb) => {
@@ -16,7 +16,7 @@ export const ScriptCache = (function(global) {
           // TODO:
         }
       }
-    }
+    };
 
     Cache._scriptTag = (key, src) => {
       if (!scriptMap.has(key)) {

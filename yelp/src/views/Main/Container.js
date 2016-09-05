@@ -60,30 +60,30 @@ export class Container extends React.Component {
     }
 
     return (
-      <Map
-        google={this.props.google}
-        onReady={this.onReady.bind(this)}
-        visible={false}
-        className={styles.wrapper}>
-        <Header />
+        <Map
+          google={this.props.google}
+          onReady={this.onReady.bind(this)}
+          visible={false}
+          className={styles.wrapper}>
+          <Header />
 
-        <Sidebar
-          title={'Restaurants'}
-          onListItemClick={this.onMarkerClick.bind(this)}
-          places={this.state.places} />
+          <Sidebar
+              title={'Restaurants'}
+              onListItemClick={this.onMarkerClick.bind(this)}
+              places={this.state.places} />
 
-        <div className={styles.content}>
-          {children}
-        </div>
+          <div className={styles.content}>
+            {children}
+          </div>
 
-      </Map>
+        </Map>
     )
   }
 }
 
 Container.contextTypes = {
   router: T.object
-};
+}
 
 export default GoogleApiWrapper({
   apiKey: __GAPI_KEY__

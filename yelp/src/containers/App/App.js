@@ -4,7 +4,7 @@ import { Router } from 'react-router';
 class App extends React.Component {
   static contextTypes = {
     router: PropTypes.object
-  };
+  }
 
   static propTypes = {
     history: PropTypes.object.isRequired,

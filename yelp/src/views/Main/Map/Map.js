@@ -39,6 +39,7 @@ export class MapComponent extends React.Component {
   render() {
     const {children} = this.props;
 
+    debugger;
     return (
       <Map map={this.props.map}
         google={this.props.google}
