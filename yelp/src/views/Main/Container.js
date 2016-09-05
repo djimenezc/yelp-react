@@ -4,6 +4,7 @@ import {searchNearby} from 'utils/googleApiHelpers'
 // our webpack alias allows us to reference `components`
 // relatively to the src/ directory
 import Header from 'components/Header/Header'
+import Sidebar from 'components/Sidebar/Sidebar'
 
 import styles from './styles.module.css'
 
@@ -40,7 +41,25 @@ export class Container extends React.Component {
     })
   }
 
+  onMarkerClick(item) {
+    const {place} = item; // place prop
+  }
+
   render() {
+
+    let children = null;
+    if (this.props.children) {
+      // We have children in the Container component
+      children = React.cloneElement(
+        this.props.children,
+        {
+          google: this.props.google,
+          places: this.state.places,
+          loaded: this.props.loaded,
+          onMarkerClick: this.onMarkerClick.bind(this)
+        });
+    }
+
     return (
       <div>
         Hello from the container
@@ -51,12 +70,15 @@ export class Container extends React.Component {
           visible={false}/>
 
         <Header />
+        <Sidebar
+          title={'Restaurants'}
+          places={this.state.places}/>
 
         <div className={styles.content}>
-          {this.state.places.map(place => {
-            return (<div key={place.id}>{place.name}</div>)
-          })}
+          {/* Setting children routes to be rendered*/}
+          {children}
         </div>
+
       </div>
     )
   }
